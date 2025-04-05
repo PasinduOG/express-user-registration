@@ -26,7 +26,7 @@ A simple and elegant user registration and login system built with Express.js an
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/express-user-registration.git
+git clone https://github.com/PasinduOG/express-user-registration.git
 
 # Navigate to project directory
 cd express-user-registration

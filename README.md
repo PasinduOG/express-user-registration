@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-### 5. Running the Application
+### 5. Running the Application (Use only one if you want)
 
 ```bash
 # Start the server

@@ -84,6 +84,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 ```bash
 # Start the server
 npm start
+
+# Start the auto-restarting server (nodemon)
+npm run dev
 ```
 
 Access the application at `http://localhost:3000`

@@ -40,10 +40,46 @@ npm install express body-parser dotenv
 Create a `.env` file in the root directory:
 
 ```env
+# Database Configuration
+DB_HOST=localhost
+DB_USER=your_database_username
+DB_PASSWORD=your_database_password
+DB_NAME=user_registration
+DB_PORT=3306
+
+# Server Configuration
 PORT=3000
 ```
 
-### 3. Running the Application
+> **Important**: Replace the placeholder values with your actual database credentials. Never commit the `.env` file with real credentials to version control.
+
+### 3. Database Setup
+
+1. Ensure you have MySQL installed and running
+2. Create a database named `user_registration`
+3. The application will automatically create the required tables on first run
+
+### 4. Database Schema
+
+You can use the following SQL script to set up your database:
+
+```sql
+CREATE DATABASE IF NOT EXISTS `user_registration`;
+USE `user_registration`;
+
+-- Dumping structure for table user_registration.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `createdAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+### 5. Running the Application
 
 ```bash
 # Start the server
